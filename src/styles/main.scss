@@ -1,0 +1,46 @@
+//$middleMonitor: 1850px;
+//$middleMonitor: 2100px;
+//$smallMonitor: 1400px;
+//$tablet: 1080px;
+//$bigPhone: 767px;
+//$smallPhone: 374px;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+html, body {
+  background-color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: none;
+  overflow: hidden;
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+@import "./fonts";
+
