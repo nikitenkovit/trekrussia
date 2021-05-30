@@ -42,5 +42,12 @@ select {
   border-radius: 0;
 }
 
+.wrapper {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
 @import "./fonts";
+@import "./header";
+@import "./intro";
 

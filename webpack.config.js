@@ -24,13 +24,14 @@ module.exports = {
         path: Paths.DIST
     },
     devServer: {
-        contentBase: Paths.DIST,
+        contentBase: Paths.SRC,
+        watchContentBase: true,
         open: false,
         port: 3000,
         compress: true,
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true,
     },
-
     module: {
         rules: [
             {
@@ -58,7 +59,7 @@ module.exports = {
                         loader: "css-loader",
                         options: {
                             url: (url) => {
-                                if (url.includes('.png') || url.includes('.jpg') || url.includes('.svg') || url.includes('.webp')) {
+                                if (url.includes('.png') || url.includes('.jpg') || url.includes('.jpeg') || url.includes('.svg') || url.includes('.webp')) {
                                     return false;
                                 }
 
