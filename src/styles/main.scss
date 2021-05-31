@@ -1,7 +1,6 @@
-//$middleMonitor: 1850px;
-//$middleMonitor: 2100px;
-//$smallMonitor: 1400px;
-//$tablet: 1080px;
+$blueColor: #2885db;
+$whatsappColor: #4caf50;
+$tablet: 768px;
 //$bigPhone: 767px;
 //$smallPhone: 374px;
 
@@ -45,6 +44,10 @@ select {
 .wrapper {
   width: 87.5%;
   margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 94.79%;
+  }
 }
 
 @import "./fonts";

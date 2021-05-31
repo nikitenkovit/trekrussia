@@ -48,4 +48,9 @@ import {DeviceWidth} from "./constants";
   window.addEventListener("resize", () => {
     checkIsNeedToggleHeader();
   });
+
+  headerToggleButton.addEventListener(`click`, () => {
+    document.querySelector(`.header__mobile-menu`).classList.toggle(`header__mobile-menu--active`);
+    headerToggleButton.classList.toggle(`header__toggle--active`)
+  })
 })();
