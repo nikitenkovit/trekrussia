@@ -1,8 +1,7 @@
 $blueColor: #2885db;
 $whatsappColor: #4caf50;
 $tablet: 768px;
-//$bigPhone: 767px;
-//$smallPhone: 374px;
+$desktop: 1440px;
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -42,11 +41,15 @@ select {
 }
 
 .wrapper {
-  width: 87.5%;
+  width: 87.5vw;
   margin: 0 auto;
 
   @media (min-width: $tablet) {
-    width: 94.79%;
+    width: 94.79vw;
+  }
+
+  @media (min-width: $desktop) {
+    width: 83.333vw;
   }
 }
 

@@ -1,45 +1,63 @@
 .header {
   position: absolute;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 6.25vw;
 
   z-index: 2;
 
   @media (min-width: $tablet) {
-    padding-top: 26px;
+    padding-top: 3.385vw;
   }
 
   &__wrapper {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: $tablet) {
+      grid-template-columns: auto 1fr auto;
+      gap: 4.94vw;
+    }
+
+    @media (min-width: $desktop) {
+      gap: 5.486vw;
+    }
   }
 
   &__logo {
-    font-size: 64px;
+    font-size: 21.25vw;
     color: #ffffff;
 
     @media (min-width: $tablet) {
-      font-size: 82px;
+      font-size: 10.937vw;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 5.277vw;
     }
   }
 
   .navigation {
     @media (min-width: $tablet) {
       &__list {
-        display: flex;
-        align-items: baseline;
+        display: grid;
+        grid-template-columns: repeat(6, max-content);
+        justify-content: space-between;
+        align-items: center;
         list-style: none;
       }
 
-      &__item:not(:last-child) {
-        margin-right: 25px;
-      }
-
       &__link {
-        font-size: 14px;
+        font-size: 1.822vw;
         text-decoration: none;
         color: #ffffff;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      &__link {
+        font-size: 1.111vw;
       }
     }
   }
@@ -50,30 +68,64 @@
       text-decoration: none;
 
       &--icon {
-        font-size: 42px;
+        position: relative;
+        font-size: 5.468vw;
         line-height: 100%;
         color: $whatsappColor;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 3.906vw;
+          height: 3.906vw;
+          border-radius: 50%;
+          background-color: #ffffff;
+          z-index: -1;
+        }
       }
 
       &--span {
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #ffffff;
         font-size: 0;
-        z-index: -1;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+
+      &--icon {
+        margin-right: .555vw;
+        font-size: 2.222vw;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 2.083vw;
+          height: 2.083vw;
+          border-radius: 50%;
+          background-color: #ffffff;
+          z-index: -1;
+        }
+      }
+
+      &--span {
+        font-size: 1.319vw;
+        font-weight: 700;
+        color: #ffffff;
       }
     }
   }
 
   &__toggle {
     position: relative;
-    width: 42px;
-    height: 42px;
+    width: 13.125vw;
+    height: 13.125vw;
     border-radius: 50%;
     background-color: #ffffff;
     border: none;
@@ -88,19 +140,19 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      width: 24px;
-      height: 2px;
+      width: 7.5vw;
+      height: .625vw;
       background-color: $blueColor;
       transition: .3s ease;
     }
 
     &::before {
-      top: 12px;
-      box-shadow: 0 8px 0 0 $blueColor;
+      top: 3.75vw;
+      box-shadow: 0 2.5vw 0 0 $blueColor;
     }
 
     &::after {
-      bottom: 12px;
+      bottom: 3.75vw;
     }
 
     &--active {
@@ -128,9 +180,9 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    padding-top: 130px;
+    padding-top: 35vw;
     background-image: linear-gradient(180deg, #2A8FEB 0%, #2876BC 100%);
-    font-size: 21px;
+    font-size: 6.56vw;
     transition: .3s ease;
 
     z-index: 1;
@@ -146,7 +198,7 @@
 
       &__item {
         text-align: center;
-        margin-bottom: 24px;
+        margin-bottom: 7vw;
       }
 
       &__link {
@@ -157,15 +209,15 @@
 
     .header__whatsapp {
       position: relative;
-      margin-bottom: 24px;
+      margin-bottom: 7vw;
       color: #ffffff;
       text-decoration: none;
 
       &--icon {
         position: absolute;
-        top: -3px;
-        left: -34px;
-        font-size: 24px;
+        top: -.900vw;
+        left: -11vw;
+        font-size: 7.5vw;
         line-height: 70%;
       }
     }
@@ -174,12 +226,12 @@
       &__list {
         display: flex;
         justify-content: space-between;
-        width: 150px;
+        width: 46.875vw;
         list-style: none;
       }
 
       &__link {
-        font-size: 32px;
+        font-size: 10vw;
         color: #ffffff;
         text-decoration: none;
       }
