@@ -1,0 +1,88 @@
+.coming-tours {
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+    padding-top: 6.56vw;
+  }
+
+  .slider__wrapper {
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: 6.60vw;
+    font-weight: 800;
+    font-size: 8.125vw;
+    line-height: 10vw;
+    color: $blackText;
+
+    &--bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-weight: 800;
+      font-size: 13.43vw;
+      opacity: 0.07;
+      white-space: nowrap;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    margin-bottom: 13.75vw;
+    transition: transform 0.6s ease
+  }
+
+  &__indicators-list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    width: 15.93vw;
+    margin: 0 auto;
+    margin-bottom: 12.5vw;
+    list-style: none;
+  }
+
+  &__indicators-item {
+    width: 3.437vw;
+    height: 3.437vw;
+    border-radius: 50%;
+    background-color: #ddefff;
+    box-shadow: 0 .312vw 1.25vw rgba(40, 133, 219, 0.05);
+
+    &.active {
+      background-color: #2885db;
+    }
+  }
+
+  &__link-to-all-tours {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 5vw;
+    color: $blackText;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg) skew(-10deg, -10deg);
+      width: 3vw;
+      height: 3vw;
+      margin-left: 2vw;
+      border: .65vw solid $blackText;
+      border-left: none;
+      border-bottom: none;
+    }
+  }
+
+  .slider__button {
+    width: 30px;
+    height: 30px;
+  }
+}
