@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
       autoplay: true,
       interval: 7000,
       refresh: true,
+      swipe: true,
     });
   }
 

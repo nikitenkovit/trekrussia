@@ -4,6 +4,10 @@
   &__wrapper {
     position: relative;
     padding-top: 6.56vw;
+
+    @media (min-width: $tablet) {
+      padding-top: 3.8vw;
+    }
   }
 
   .slider__wrapper {
@@ -26,13 +30,37 @@
       opacity: 0.07;
       white-space: nowrap;
     }
+
+    @media (min-width: $tablet) {
+      margin-bottom: 2.02vw;
+      font-size: 4.166vw;
+      line-height: 5.07vw;
+
+      &--bg {
+        font-size: 5.859vw;
+      }
+    }
   }
 
   &__list {
     display: flex;
     list-style: none;
     margin-bottom: 13.75vw;
-    transition: transform 0.6s ease
+    transition: transform 0.6s ease;
+
+    @media (min-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(3, 30.446vw);
+      justify-content: space-between;
+      margin-bottom: 6.25vw;
+      transform: translateX(0) !important;
+    }
+  }
+
+  &__item {
+    @media (min-width: $tablet) {
+      transform: translateX(0) !important;
+    }
   }
 
   &__indicators-list {
@@ -43,6 +71,10 @@
     margin: 0 auto;
     margin-bottom: 12.5vw;
     list-style: none;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
   }
 
   &__indicators-item {
@@ -63,6 +95,7 @@
     text-align: center;
     font-weight: 700;
     font-size: 5vw;
+    line-height: 70%;
     color: $blackText;
     text-transform: uppercase;
     text-decoration: none;
@@ -72,17 +105,23 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%) rotate(45deg) skew(-10deg, -10deg);
-      width: 3vw;
-      height: 3vw;
+      width: 2.8vw;
+      height: 2.8vw;
       margin-left: 2vw;
       border: .65vw solid $blackText;
       border-left: none;
       border-bottom: none;
     }
-  }
 
-  .slider__button {
-    width: 30px;
-    height: 30px;
+    @media (min-width: $tablet) {
+      font-size: 2.083vw;
+
+      &::after {
+        width: 1.3vw;
+        height: 1.3vw;
+        margin-left: 1.5vw;
+        border-width: .260vw;
+      }
+    }
   }
 }
