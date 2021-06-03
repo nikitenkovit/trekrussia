@@ -8,6 +8,10 @@
     @media (min-width: $tablet) {
       padding-top: 3.8vw;
     }
+
+    @media (min-width: $desktop) {
+      padding-top: 2.569vw;
+    }
   }
 
   .slider__wrapper {
@@ -40,6 +44,18 @@
         font-size: 5.859vw;
       }
     }
+
+    @media (min-width: $desktop) {
+      position: relative;
+      margin-bottom: 3.055vw;
+      font-size: 2.43vw;
+      line-height: 2.986vw;
+
+      &--bg {
+        font-size: 3.819vw;
+        top: -.5vw;
+      }
+    }
   }
 
   &__list {
@@ -54,6 +70,11 @@
       justify-content: space-between;
       margin-bottom: 6.25vw;
       transform: translateX(0) !important;
+    }
+
+    @media (min-width: $desktop) {
+      grid-template-columns: repeat(3, 26.672vw);
+      margin-bottom: 6.736vw;
     }
   }
 
@@ -92,6 +113,7 @@
   &__link-to-all-tours {
     position: relative;
     display: block;
+    margin-bottom: 18.125vw;
     text-align: center;
     font-weight: 700;
     font-size: 5vw;
@@ -115,12 +137,25 @@
 
     @media (min-width: $tablet) {
       font-size: 2.083vw;
+      margin-bottom: 4.036vw;
 
       &::after {
         width: 1.3vw;
         height: 1.3vw;
         margin-left: 1.5vw;
         border-width: .260vw;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 1.111vw;
+      margin-bottom: 1.18vw;
+
+      &::after {
+        width: .7vw;
+        height: .7vw;
+        margin-left: .833vw;
+        border-width: .145vw;
       }
     }
   }

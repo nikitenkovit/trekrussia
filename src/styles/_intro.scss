@@ -159,6 +159,12 @@
         width: 1.479vw;
         height: 1.479vw;
         font-size: .739vw;
+        transition: .3s ease;
+
+        &:hover,
+        &:focus {
+          transform: scale(1.5);
+        }
       }
     }
   }

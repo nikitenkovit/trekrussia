@@ -1,3 +1,21 @@
+@keyframes showBlueBg {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: .73;
+  }
+}
+
+@keyframes showEye {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .tour {
   position: relative;
   flex: 0 0 100%;
@@ -8,6 +26,48 @@
     flex: auto;
     max-width: none;
     height: 39.255vw;
+  }
+
+  @media (min-width: $desktop) {
+    height: 30.833vw;
+
+    &:hover .tour__price,
+    &:hover .tour__wrapper {
+      visibility: hidden;
+    }
+
+    &:hover .tour__link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &:hover .tour__link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #2885db;
+      animation: .7s showBlueBg ease;
+      opacity: .73;
+    }
+
+    &:hover .tour__link::after {
+      content: "\e901";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      font-family: 'icomoon', sans-serif;
+      font-size: 4.93vw;
+      animation: .7s showEye ease;
+    }
   }
 
   &::after {
@@ -34,6 +94,11 @@
     @media (min-width: $tablet) {
       width: 27.372vw;
       padding-top: 16.145vw;
+    }
+
+    @media (min-width: $desktop) {
+      width: 23.743vw;
+      padding-top: 16.261vw;
     }
   }
 
@@ -73,6 +138,15 @@
       border-radius: 0 2.604vw 2.604vw 0;
       border-width: .520vw;
       font-size: 1.692vw;
+    }
+
+    @media (min-width: $desktop) {
+      top: 2.569vw;
+      width: 8.888vw;
+      height: 2.708vw;
+      border-radius: 0 1.388vw 1.388vw 0;
+      border-width: .347vw;
+      font-size: 1.111vw;
     }
   }
 
@@ -114,6 +188,19 @@
         padding-left: 1.822vw;
       }
     }
+
+    @media (min-width: $desktop) {
+      height: 2.17vw;
+      margin-right: 1.975vw;
+      margin-bottom: 1.291vw;
+      font-size: .972vw;
+
+      &--span {
+        margin-left: 1.041vw;
+        margin-right: 1.99vw;
+        padding-left: 1.3vw;
+      }
+    }
   }
 
   &__duration {
@@ -121,11 +208,21 @@
     font-weight: 500;
     font-size: 3.75vw;
 
+    &--days,
+    &--nights {
+      position: relative;
+      padding-left: 7.43vw;
+    }
+
     &--days {
       margin-right: 4.06vw;
     }
 
     &--icon {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
       margin-right: 2.24vw;
       font-size: 4.84vw;
     }
@@ -134,6 +231,11 @@
       margin-bottom: 1.302vw;
       font-size: 1.562vw;
 
+      &--days,
+      &--nights {
+        padding-left: 2.34vw;
+      }
+
       &--days {
         margin-right: 1.953vw;
       }
@@ -141,6 +243,26 @@
       &--icon {
         margin-right: .520vw;
         font-size: 1.822vw;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      display: inline-block;
+      margin-bottom: 1.622vw;
+      font-size: .833vw;
+
+      &--days,
+      &--nights {
+        padding-left: 2.013vw;
+      }
+
+      &--days {
+        margin-right: 1.694vw;
+      }
+
+      &--icon {
+        margin-right: .49vw;
+        font-size: 1.45vw;
       }
     }
   }
@@ -164,15 +286,39 @@
       opacity: .28;
     }
 
+    &--br-desktop {
+      display: none;
+    }
+
     @media (min-width: $tablet) {
       margin-bottom: 1.562vw;
       padding-bottom: 1.476vw;
       font-size: 2.343vw;
       line-height: 2.864vw;
 
+      &--br-mobile {
+        display: none;
+      }
+
       &::after {
         width: 6.261vw;
         height: .130vw;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 1.337vw;
+      padding-bottom: .972vw;
+      font-size: 1.666vw;
+      line-height: 2.013vw;
+
+      &::after {
+        width: 5.486vw;
+        height: .075vw;
+      }
+
+      &--br-desktop {
+        display: block;
       }
     }
   }
@@ -208,6 +354,18 @@
 
       &--description {
         font-size: 1.302vw;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      grid-gap: .63vw;
+
+      &--title {
+        font-size: .833vw;
+      }
+
+      &--description {
+        font-size: .902vw;
       }
     }
   }
