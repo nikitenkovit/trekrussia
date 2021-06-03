@@ -1,17 +1,38 @@
 .about-us {
+  position: relative;
   padding-bottom: 75.312vw;
-  background: url("./images/about-us-bg.jpg") no-repeat bottom;
-  background-size: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 62.187vw;
+    background: url("./images/about-us-bg.jpg") no-repeat center;
+    background-size: 100%;
+  }
 
   @media (min-width: $tablet) {
     padding-bottom: 60.807vw;
-    background: url("./images/about-us-bg-tablet.jpg") no-repeat bottom;
+
+    &::before {
+      height: 55.338vw;
+      background: url("./images/about-us-bg-tablet.jpg") no-repeat center;
+      background-size: 100%;
+    }
   }
 
   @media (min-width: $desktop) {
     min-height: 37.569vw;
     padding-bottom: 0;
-    background: url("./images/about-us-bg-desktop.jpg") no-repeat left;
+
+    &::before {
+      width: 62.5vw;
+      height: 37.569vw;
+      background: url("./images/about-us-bg-desktop.jpg") no-repeat center;
+      background-size: 100%;
+    }
   }
 
   &__wrapper {
@@ -24,10 +45,12 @@
     }
 
     @media (min-width: $desktop) {
+      position: relative;
       width: 37.986vw;
       margin: 0;
       margin-left: 53.611vw;
       padding-top: 3.958vw;
+      z-index: 1;
     }
   }
 
