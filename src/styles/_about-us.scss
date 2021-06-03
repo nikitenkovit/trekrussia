@@ -1,0 +1,101 @@
+.about-us {
+  padding-bottom: 75.312vw;
+  background: url("./images/about-us-bg.jpg") no-repeat bottom;
+  background-size: 100%;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 60.807vw;
+    background: url("./images/about-us-bg-tablet.jpg") no-repeat bottom;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 37.569vw;
+    padding-bottom: 0;
+    background: url("./images/about-us-bg-desktop.jpg") no-repeat left;
+  }
+
+  &__wrapper {
+    width: 78.75vw;
+    padding-top: 5.937vw;
+
+    @media (min-width: $tablet) {
+      width: 94.79vw;
+      padding-top: 2.473vw;
+    }
+
+    @media (min-width: $desktop) {
+      width: 37.986vw;
+      margin: 0;
+      margin-left: 53.611vw;
+      padding-top: 3.958vw;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 5vw;
+    font-weight: 800;
+    font-size: 10vw;
+    line-height: 12.187vw;
+    color: $blackText;
+
+    &--bg {
+      position: absolute;
+      top: -2vw;
+      left: 0;
+      font-size: 17.187vw;
+      line-height: 70%;
+      opacity: .07;
+    }
+
+    @media (min-width: $tablet) {
+      margin-bottom: 3.385vw;
+      font-size: 4.166vw;
+      line-height: 5.078vw;
+
+      &--bg {
+        top: -1vw;
+        font-size: 7.161vw;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 1.597vw;
+      font-size: 2.43vw;
+      line-height: 2.986vw;
+
+      &--bg {
+        top: -.5vw;
+        font-size: 3.819vw;
+      }
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 4.062vw;
+    line-height: 155.03%;
+    color: $blackText;
+
+    @media (min-width: $tablet) {
+      font-size: 1.822vw;
+      color: #000000;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: .972vw;
+    }
+  }
+
+  &__description + &__description {
+    margin-top: 8.437vw;
+
+    @media (min-width: $tablet) {
+      margin-top: 3.125vw;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 2.083vw;
+    }
+  }
+}
