@@ -14,10 +14,6 @@
     }
   }
 
-  .slider__wrapper {
-    overflow: hidden;
-  }
-
   &__title {
     margin-bottom: 6.60vw;
     font-weight: 800;
@@ -84,29 +80,11 @@
     }
   }
 
-  &__indicators-list {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    width: 15.93vw;
-    margin: 0 auto;
+  .indicators-list {
     margin-bottom: 12.5vw;
-    list-style: none;
 
     @media (min-width: $tablet) {
       display: none;
-    }
-  }
-
-  &__indicators-item {
-    width: 3.437vw;
-    height: 3.437vw;
-    border-radius: 50%;
-    background-color: #ddefff;
-    box-shadow: 0 .312vw 1.25vw rgba(40, 133, 219, 0.05);
-
-    &.active {
-      background-color: #2885db;
     }
   }
 

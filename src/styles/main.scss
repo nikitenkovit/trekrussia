@@ -46,12 +46,40 @@ select {
   margin: 0 auto;
 
   @media (min-width: $tablet) {
-    width: 94.79vw;
+    //width: 94.79vw;
+    width: 94.669271vw;
   }
 
   @media (min-width: $desktop) {
     width: 83.333vw;
   }
+}
+
+.indicators-list {
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.indicators-item {
+  display: inline-block;
+  width: 3.437vw;
+  height: 3.437vw;
+  border-radius: 50%;
+  background-color: #ddefff;
+  box-shadow: 0 .312vw 1.25vw rgba(40, 133, 219, 0.05);
+
+  &:not(:last-child) {
+    margin-right: 2.5vw;
+  }
+
+  &.active {
+    background-color: #2885db;
+  }
+}
+
+.slider__wrapper {
+  overflow: hidden;
 }
 
 @import "./fonts";
@@ -60,4 +88,6 @@ select {
 @import "./tour";
 @import "./coming-tours";
 @import "./about-us";
+@import "./instructors";
+@import "./instructor";
 

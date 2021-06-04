@@ -286,19 +286,11 @@
       opacity: .28;
     }
 
-    &--br-desktop {
-      display: none;
-    }
-
     @media (min-width: $tablet) {
       margin-bottom: 1.562vw;
       padding-bottom: 1.476vw;
       font-size: 2.343vw;
       line-height: 2.864vw;
-
-      &--br-mobile {
-        display: none;
-      }
 
       &::after {
         width: 6.261vw;
@@ -315,10 +307,6 @@
       &::after {
         width: 5.486vw;
         height: .075vw;
-      }
-
-      &--br-desktop {
-        display: block;
       }
     }
   }

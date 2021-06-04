@@ -1,0 +1,85 @@
+.instructors {
+  padding-bottom: 65.625vw;
+  background: url("./images/instructors-bg-mobile.jpg") no-repeat bottom;
+  background-size: 100%;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 39.713vw;
+    background: url("./images/instructors-bg-tablet.jpg") no-repeat bottom;
+    background-size: 100%;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-top: 6.25vw;
+
+    @media (min-width: $tablet) {
+      padding-top: 2.605vw;
+    }
+  }
+
+  &__title {
+    margin-bottom: 3.437vw;
+    padding-left: 3.75vw;
+    font-weight: 800;
+    font-size: 10vw;
+    line-height: 12.187vw;
+    color: $blackText;
+
+    &--bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-weight: 800;
+      font-size: 12.5vw;
+      line-height: 15.312vw;
+      opacity: .07;
+    }
+
+    @media (min-width: $tablet) {
+      margin-bottom: 2.994vw;
+      padding-left: 1.041vw;
+      font-size: 4.166vw;
+      line-height: 5.078vw;
+
+      br {
+        display: none;
+      }
+
+      &--bg {
+        font-size: 7.161vw;
+        line-height: 8.723vw;
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: 6.25vw;
+    padding-left: 3.75vw;
+    font-size: 3.75vw;
+    line-height: 6.25vw;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 2.604vw;
+      padding-left: 1.041vw;
+      font-size: 2.083vw;
+      line-height: 3.125vw;
+    }
+  }
+
+  .slider__wrapper {
+    margin-bottom: 9.687vw;
+    box-shadow: 0 0 7.812vw rgba(0, 0, 0, 0.09);
+
+    @media (min-width: $tablet) {
+      margin-bottom: 3.906vw;
+      box-shadow: 0 0 3.255vw rgba(0, 0, 0, 0.09);
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    transition: transform 0.6s ease;
+  }
+}
