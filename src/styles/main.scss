@@ -12,6 +12,18 @@ body {
 
 html, body {
   background-color: #ffffff;
+
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  scrollbar-height: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
+    background: transparent;
+  }
 }
 
 *,
@@ -46,7 +58,6 @@ select {
   margin: 0 auto;
 
   @media (min-width: $tablet) {
-    //width: 94.79vw;
     width: 94.669271vw;
   }
 
@@ -76,10 +87,58 @@ select {
   &.active {
     background-color: #2885db;
   }
+
+  @media (min-width: $tablet) {
+    width: 1.692vw;
+    height: 1.692vw;
+
+    &:not(:last-child) {
+      margin-right: 1.4322vw;
+    }
+  }
+}
+
+.slider_disable-transition {
+  transition: none;
 }
 
 .slider__wrapper {
   overflow: hidden;
+}
+
+.slider__button {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 16.25vw;
+    width: 2.569vw;
+    height: 2.569vw;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: .104vw solid #2885db;
+    box-shadow: 0 .277vw .277vw rgba(40, 133, 219, 0.1);
+
+    &::before {
+      content: "\e900";
+      font-family: 'icomoon', sans-serif;
+      font-size: 1.18vw;
+      line-height: 70%;
+      color: #2885db;
+    }
+
+    &--left {
+      left: -.959926vw;
+      transform: rotate(180deg);
+    }
+
+    &--right {
+      right: -.959926vw;
+    }
+  }
 }
 
 @import "./fonts";

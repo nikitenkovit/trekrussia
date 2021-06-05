@@ -2,28 +2,33 @@
   flex: 0 0 100%;
   max-width: 100%;
   height: 147vw;
-  //background-color: #ffffff;
   box-sizing: border-box;
 
   @media (min-width: $tablet) {
-    //flex: 0 0 33.333333333333333333333%;
-    flex: 0 0 31.049479vw;
-    //max-width: 33.33333333333333333333%;
-    max-width: 31.049479vw;
-    height: 61.197vw;
+    flex: 0 0 33.33333333333333333333333333333%;
+    max-width: 33.33333333333333333333333333333%;
+    height: 63.893vw;
+    padding: 0 .379883vw;
+  }
 
-    padding-right: .654948vw;
-    //margin-right: .654vw;
-    box-sizing: content-box;
-    //box-shadow: 0 0 .651vw rgba(0, 0, 0, 0.09);
+  @media (min-width: $desktop) {
+    flex: 0 0 25%;
+    max-width: 25%;
+    height: 36.5vw;
+    padding: 0 .324074vw;
   }
 
   &__wrapper {
+    height: 100%;
     padding: 7.187vw;
     background-color: #ffffff;
 
     @media (min-width: $tablet) {
       padding: 2.643vw;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 1.666vw;
     }
   }
 
@@ -37,13 +42,22 @@
       height: 23.496vw;
       margin-bottom: 2.457vw;
     }
+
+    @media (min-width: $desktop) {
+      height: 14.652vw;
+      margin-bottom: 1.527vw;
+    }
   }
 
   figcaption {
     margin-bottom: 5.962vw;
 
     @media (min-width: $tablet) {
-      margin-bottom: 2.309vw;
+      margin-bottom: 1.8vw;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 1.18vw;
     }
   }
 
@@ -56,6 +70,11 @@
     @media (min-width: $tablet) {
       margin-right: 1.302vw;
       font-size: 1.822vw;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: 1.388vw;
+      font-size: .972222vw;
     }
   }
 
@@ -77,6 +96,14 @@
       border-width: .13vw;
       font-size: .886vw;
     }
+
+    @media (min-width: $desktop) {
+      width: 1.666vw;
+      height: 1.666vw;
+      padding: .555vw .347vw .555vw .416vw;
+      border-width: .069444vw;
+      font-size: .555vw;
+    }
   }
 
   &__description-list {
@@ -84,16 +111,29 @@
     list-style: none;
     font-size: 3.437vw;
     line-height: 130%;
-    overflow: scroll;
+    overflow-y: scroll;
 
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
     scrollbar-width: none;
     scrollbar-height: none;
 
+    &::-webkit-scrollbar {
+      width: 0 !important;
+      height: 0 !important;
+      display: none !important;
+      background: transparent;
+    }
+
     @media (min-width: $tablet) {
-      max-height: 26.041vw;
+      max-height: 27vw;
       font-size: 1.432vw;
+      line-height: 130%;
+    }
+
+    @media (min-width: $desktop) {
+      max-height: 14.93vw;
+      font-size: .833vw;
       line-height: 134%;
     }
   }
@@ -102,7 +142,11 @@
     margin-top: 3.5vw;
 
     @media (min-width: $tablet) {
-      margin-top: 1.822vw;
+      margin-top: 1.6vw;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 1.111vw;
     }
   }
 }
