@@ -21,6 +21,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-tour-arrow:before {
+  content: "\e907";
+}
+.icon-quotes:before {
+  content: "\e908";
+}
 .icon-right:before {
   content: "\e900";
 }

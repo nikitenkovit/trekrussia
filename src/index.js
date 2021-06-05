@@ -10,6 +10,7 @@ import {ChiefSlider} from "./js/chiefSlider";
 document.addEventListener('DOMContentLoaded', () => {
   const comingTours = document.getElementById('coming-tours');
   const instructors = document.getElementById('instructors');
+  const reviews = document.getElementById('reviews');
 
   if (comingTours) {
     new ChiefSlider(comingTours, {
@@ -22,6 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (instructors) {
     new ChiefSlider(instructors, {
+      loop: false,
+      autoplay: false,
+      refresh: true,
+      swipe: true,
+    });
+  }
+  if (reviews) {
+    new ChiefSlider(reviews, {
       loop: false,
       autoplay: false,
       refresh: true,

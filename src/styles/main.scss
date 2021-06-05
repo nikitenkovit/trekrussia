@@ -96,6 +96,15 @@ select {
       margin-right: 1.4322vw;
     }
   }
+
+  @media (min-width: $desktop) {
+    width: .833vw;
+    height: .833vw;
+
+    &:not(:last-child) {
+      margin-right: .694vw;
+    }
+  }
 }
 
 .slider_disable-transition {
@@ -149,4 +158,6 @@ select {
 @import "./about-us";
 @import "./instructors";
 @import "./instructor";
+@import "./reviews";
+@import "./review";
 
