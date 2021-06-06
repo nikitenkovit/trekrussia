@@ -527,16 +527,16 @@
                 на фото. Лучшие фотографии украсят этот раздел нашего сайта.
             </p>
         </div>
-
-        <!-- big - большая вертикальная фотография соотношение сторон 9:16
-             middle - средняя горизонтальная фотография соотношение сторон 4:3
-             small -  маленькая горизонтальная фотография соотношение сторон 16:9
-
-             desktop - присутствует на компьютере
-             tablet - присутствует на планшете
-             mobile - присутствует на мобильном-->
-
         <ul class="gallery__list">
+
+            <!-- big - большая вертикальная фотография соотношение сторон 9:16
+                middle - средняя горизонтальная фотография соотношение сторон 4:3
+                small -  маленькая горизонтальная фотография соотношение сторон 16:9
+
+                desktop - присутствует на компьютере
+                tablet - присутствует на планшете
+                mobile - присутствует на мобильном-->
+
             <li class="gallery__item big desktop tablet mobile">
                 <img class="gallery__image" src="./images/gallery/1.jpg" alt="Человек в синей куртке на скале">
             </li>
@@ -551,7 +551,6 @@
             </li>
             <li class="gallery__item small desktop mobile">
                 <img class="gallery__image" src="./images/gallery/5.jpg" alt="Ледоруб на фоне горе">
-<!--                <img class="gallery__image" src="./images/gallery/test2.jpg" alt="Ледоруб на фоне горе">-->
             </li>
             <li class="gallery__item middle desktop mobile">
                 <img class="gallery__image" src="./images/gallery/6.jpg" alt="Палатки и ночное небо">
@@ -562,6 +561,25 @@
         </ul>
     </section>
     <!--  / gallery  -->
+    <!--  form  -->
+    <section class="form" id="form">
+        <div class="form__wrapper wrapper">
+            <h2 class="form__title">Остались вопросы?</h2>
+            <p class="form__description">
+                Заполните форму и наш оператор связется с вами для консультации
+            </p>
+            <form class="form__form" action="#">
+                <label class="form__group">
+                    <input class="form__input" type="text" placeholder="Как к вам обращаться?">
+                </label>
+                <label class="form__group">
+                    <input class="form__input" type="number" placeholder="Телефон" required>
+                </label>
+                <button class="form__submit" type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+    <!--  /form  -->
 </main>
 </body>
 </html>

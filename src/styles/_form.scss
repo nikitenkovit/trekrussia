@@ -1,0 +1,152 @@
+.form {
+  height: 206.875vw;
+  background-color: #111111;
+  background-image: url("./images/form-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet) {
+    height: 86.197vw;
+    background-image: url("./images/form-bg-tablet.jpg");
+  }
+
+  @media (min-width: $desktop) {
+    height: 50.347222vw;
+    background-image: url("./images/form-bg-desktop.jpg");
+  }
+
+  &__wrapper {
+    padding-top: 44.375vw;
+
+    @media (min-width: $tablet) {
+      padding-top: 19.863281vw;
+    }
+
+    @media (min-width: $desktop) {
+      padding-top: 17.708vw;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.25vw;
+    font-weight: 800;
+    font-size: 10vw;
+    line-height: 12.1875vw;
+    color: #ffffff;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      margin-bottom: .651vw;
+      font-size: 4.166vw;
+      line-height: 5.0781vw;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: .625vw;
+      font-size: 2.430vw;
+      line-height: 2.986vw;
+    }
+  }
+
+  &__description {
+    margin-bottom: 5.9375vw;
+    font-size: 4.6875vw;
+    line-height: 151.03%;
+    color: #ffffff;
+    text-shadow: 0 0 1.562vw #000000;
+
+    @media (min-width: $tablet) {
+      width: 39.71vw;
+      margin: 0 auto;
+      margin-bottom: 2.2135vw;
+      font-size: 2.083vw;
+      text-shadow: 0 0 .651vw #000000;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100%;
+      margin-bottom: 3.055vw;
+      font-size: 1.111vw;
+      text-align: center;
+      text-shadow: 0 0 .347vw #000000;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__group {
+    display: block;
+    margin-bottom: 3.75vw;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 2.343vw;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 0;
+      margin-right: .902778vw;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 18.75vw;
+    padding: 5.9375vw;
+    border: .3125vw solid rgba(2, 102, 193, .112);
+    font-size: 4.375vw;
+    line-height: 151.03%;
+    color: black;
+
+    &::placeholder {
+      color: #b0b0b0;
+    }
+
+    @media (min-width: $tablet) {
+      width: 46.09375vw;
+      height: 8.33333vw;
+      margin: 0 auto;
+      padding: 2.5vw 4.947vw;
+      border: .130208vw solid rgba(2, 102, 193, .112);
+      font-size: 2.083vw;
+    }
+
+    @media (min-width: $desktop) {
+      width: 24.583vw;
+      height: 4.444vw;
+      padding: 2.152vw 1.319vw;
+      border: .069444vw solid rgba(2, 102, 193, .112);
+      font-size: 1.111vw;
+    }
+  }
+
+  &__submit {
+    display: block;
+    width: 100%;
+    height: 18.75vw;
+    border: none;
+    background-color: $blueColor;
+    font-weight: 500;
+    font-size: 4.687vw;
+    line-height: 70%;
+    color: #ffffff;
+    cursor: pointer;
+
+    @media (min-width: $tablet) {
+      width: 46.09375vw;
+      height: 8.33333vw;
+      margin: 0 auto;
+      font-size: 2.083vw;
+    }
+
+    @media (min-width: $desktop) {
+      width: 24.583vw;
+      height: 4.444vw;
+      margin: 0;
+      font-size: 1.111vw;
+    }
+  }
+}
