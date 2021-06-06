@@ -1,4 +1,9 @@
 .reviews {
+  position: relative;
+  background: url("./images/reviews-bg-desktop.webp") no-repeat 0 60%;
+  background-size: 100%;
+  z-index: 1;
+
   &__wrapper {
     position: relative;
     margin-top: 5.937vw;

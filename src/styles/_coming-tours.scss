@@ -101,16 +101,11 @@
     text-decoration: none;
 
     &::after {
-      content: "";
+      content: "\e907";
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%) rotate(45deg) skew(-10deg, -10deg);
-      width: 2.8vw;
-      height: 2.8vw;
-      margin-left: 2vw;
-      border: .65vw solid $blackText;
-      border-left: none;
-      border-bottom: none;
+      margin-left: 4.062vw;
+      font-family: 'icomoon', sans-serif;
+      font-size: 3.7vw;
     }
 
     @media (min-width: $tablet) {
@@ -118,10 +113,8 @@
       margin-bottom: 4.036vw;
 
       &::after {
-        width: 1.3vw;
-        height: 1.3vw;
-        margin-left: 1.5vw;
-        border-width: .260vw;
+        margin-left: 1.562vw;
+        font-size: 1.7vw;
       }
     }
 
@@ -130,10 +123,8 @@
       margin-bottom: 1.4vw;
 
       &::after {
-        width: .7vw;
-        height: .7vw;
-        margin-left: .833vw;
-        border-width: .145vw;
+        margin-left: .850vw;
+        font-size: .89vw;
       }
     }
   }
