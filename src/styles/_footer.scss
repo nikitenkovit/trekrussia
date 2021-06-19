@@ -1,0 +1,234 @@
+.footer {
+  &__wrapper {
+    display: grid;
+    justify-content: center;
+
+    @media (min-width: $desktop) {
+      grid-template-columns: repeat(3, auto);
+      align-items: start;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 9.06vw;
+    font-size: 24.375vw;
+    line-height: 70%;
+    color: #2d383f;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      order: 0;
+      margin-bottom: 5.72vw;
+      font-size: 11.458vw;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 4.93vw;
+      line-height: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__whatsapp {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-gap: 3.437vw;
+    margin-bottom: 7.5vw;
+    text-decoration: none;
+
+    &--icon {
+      font-size: 9.375vw;
+      line-height: 70%;
+      color: $whatsappColor;
+    }
+
+    &--span {
+      font-weight: 700;
+      font-size: 5.312vw;
+      line-height: 70%;
+      text-align: right;
+      color: #2d383f;
+    }
+
+    @media (min-width: $tablet) {
+      order: 2;
+      grid-gap: 1.302vw;
+      width: 23.046vw;
+      margin: 0 auto;
+      margin-bottom: 4.427vw;
+
+      &--icon {
+        font-size: 3.125vw;
+      }
+
+      &--span {
+        font-size: 2.213vw;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      grid-gap: .625vw;
+      width: 14.2375vw;
+      margin: 0;
+
+      &--icon {
+        font-size: 2.222vw;
+      }
+
+      &--span {
+        font-size: 1.319vw;
+      }
+    }
+  }
+
+  &__social {
+    margin-bottom: 7.5vw;
+
+    .social__list {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: space-between;
+      list-style: none;
+    }
+
+    .social__link {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      width: 12.5vw;
+      height: 12.5vw;
+      border: 1px solid #2d383f;
+      text-decoration: none;
+
+      &--icon {
+        font-size: 6.875vw;
+        line-height: 70%;
+        color: #2d383f;
+      }
+
+      .icon-facebook {
+        font-size: 6.25vw;
+      }
+
+      .icon-instagram {
+        font-size: 7.812vw;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      order: 3;
+      margin-bottom: 9.244vw;
+
+      .social__list {
+        width: 20.963vw;
+        margin: 0 auto;
+      }
+
+      .social__link {
+        width: 4.557vw;
+        height: 4.557vw;
+
+        &--icon {
+          font-size: 2.566vw;
+        }
+
+        .icon-facebook {
+          font-size: 2.278vw;
+        }
+
+        .icon-instagram {
+          font-size: 2.898vw;
+        }
+      }
+    }
+
+    @media (min-width: $desktop) {
+      position: relative;
+      top: -1.319vw;
+      margin-bottom: 4.84vw;
+      grid-column: 1 / -1;
+
+      .social__list {
+        width: 9.041vw;
+      }
+
+      .social__link {
+        width: 1.965vw;
+        height: 1.965vw;
+
+        &--icon {
+          font-size: 1.106vw;
+        }
+
+        .icon-facebook {
+          font-size: .982vw;
+        }
+
+        .icon-instagram {
+          font-size: 1.25vw;
+        }
+      }
+    }
+  }
+
+  .footer__navigation {
+    margin-bottom: 10.312vw;
+
+    .navigation__list {
+      display: grid;
+      justify-content: center;
+      list-style: none;
+    }
+
+    .navigation__item {
+      margin-bottom: 3.75vw;
+      text-align: center;
+    }
+
+    .navigation__link {
+      font-size: 4.062vw;
+      line-height: 158.86%;
+      color: #2d383f;
+      text-decoration: none;
+    }
+
+    @media (min-width: $tablet) {
+      order: 1;
+      margin-bottom: 3.645vw;
+
+      .navigation__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        grid-row-gap: 1.692vw;
+        width: 70vw;
+        margin: 0 auto;
+      }
+
+      .navigation__item {
+        margin-bottom: 0;
+      }
+
+      .navigation__link {
+        font-size: 2.083vw;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 0;
+
+      .navigation__list {
+        grid-template-columns: auto;
+        grid-auto-flow: column;
+        grid-column-gap: 3.194vw;
+        grid-row-gap: 1.736vw;
+        justify-content: center;
+      }
+
+      .navigation__link {
+        font-size: 1.111vw;
+      }
+    }
+  }
+}

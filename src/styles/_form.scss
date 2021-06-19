@@ -73,8 +73,10 @@
   }
 
   &__form {
-    display: flex;
-    justify-content: center;
+    @media (min-width: $desktop) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__group {
