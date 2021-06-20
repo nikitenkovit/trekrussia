@@ -13,16 +13,17 @@ body {
 html, body {
   background-color: #ffffff;
 
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
-  scrollbar-width: none;
-  scrollbar-height: none;
+  -ms-overflow-style: none !important;
+  overflow: -moz-scrollbars-none !important;
+  scrollbar-width: none !important;
+  scrollbar-height: none !important;
 
   &::-webkit-scrollbar {
     width: 0 !important;
     height: 0 !important;
     display: none !important;
-    background: transparent;
+    background: transparent !important;
+    opacity: 0 !important;
   }
 }
 
@@ -164,4 +165,5 @@ select {
 @import "./gallery";
 @import "./form";
 @import "./footer";
+@import "./scroll-up";
 

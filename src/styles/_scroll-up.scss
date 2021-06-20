@@ -1,0 +1,62 @@
+.scroll-up {
+  position: fixed;
+  bottom: 50px;
+  right: 25px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  color: #dcdcdc;
+  cursor: pointer;
+  visibility: hidden;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 4px #dcdcdc;
+  opacity: 0;
+  transition: .2s;
+  transform: translateY(25px);
+
+  &::before {
+    content: "↑";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 100%;
+  }
+
+  &:hover {
+    color: #2A8FEB;
+  }
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__svg {
+    &--path {
+      fill: none;
+      stroke: #2A8FEB;
+      stroke-width: 4px;
+      transition: .2s;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+
+    &::before {
+      font-size: 30px;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import './js/header';
 import {ChiefSlider} from "./js/chiefSlider";
 import {phoneMask} from "./js/phone-mask";
 import smoothscroll from 'smoothscroll-polyfill';
+import './js/scroll-up';
 
 // инициализация слайдеров
 document.addEventListener('DOMContentLoaded', () => {
