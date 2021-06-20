@@ -7,6 +7,8 @@ import {DeviceWidth} from "./constants";
   const headerWrapper = document.querySelector(`.header__wrapper`);
   const introWrapper = document.querySelector(`.intro__wrapper`);
   const headerToggleButton = document.querySelector(`.header__toggle`);
+  const body = document.querySelector(`body`);
+  const navigationLinks = document.querySelectorAll('.navigation__link');
 
   const createHeaderMobileMenuContainer = () => {
     const newElement = document.createElement(`div`);
@@ -14,8 +16,19 @@ import {DeviceWidth} from "./constants";
     return newElement;
   };
 
+  const toggleBody = () => {
+    if (document.querySelector(`.header__mobile-menu--active`)) {
+      body.style.position = `fixed`;
+      body.style.top = `0`;
+      body.style.left = `0`;
+      body.style.width = `100%`;
+    } else {
+      body.style.position = `static`;
+    }
+  }
+
   const toggleToMobile = () => {
-    document.querySelector(`body`).prepend(createHeaderMobileMenuContainer())
+    body.prepend(createHeaderMobileMenuContainer())
 
     const mobileMenuContainer = document.querySelector(`.header__mobile-menu`);
     mobileMenuContainer.insertAdjacentElement(`beforeend`, headerNavigation);
@@ -49,8 +62,19 @@ import {DeviceWidth} from "./constants";
     checkIsNeedToggleHeader();
   });
 
-  headerToggleButton.addEventListener(`click`, () => {
+  const handleToggleMobileMenu = () => {
     document.querySelector(`.header__mobile-menu`).classList.toggle(`header__mobile-menu--active`);
-    headerToggleButton.classList.toggle(`header__toggle--active`)
+    headerToggleButton.classList.toggle(`header__toggle--active`);
+    toggleBody();
+  }
+
+  headerToggleButton.addEventListener(`click`, handleToggleMobileMenu);
+
+  navigationLinks.forEach((link) => {
+    link.addEventListener(`click`, () => {
+      if (document.querySelector(`.header__mobile-menu--active`)) {
+        handleToggleMobileMenu();
+      }
+    })
   })
 })();

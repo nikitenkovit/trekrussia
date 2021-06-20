@@ -6,6 +6,7 @@ import './styles/main.scss';
 import './js/header';
 import {ChiefSlider} from "./js/chiefSlider";
 import {phoneMask} from "./js/phone-mask";
+import smoothscroll from 'smoothscroll-polyfill';
 
 // инициализация слайдеров
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,3 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // инициализация маски телефона
 phoneMask();
+
+// плавная прокрутка к якорю + полифил
+smoothscroll.polyfill();
+const anchors = document.querySelectorAll('.anchor');
+
+for (let i = 0; i < anchors.length; i++) {
+  anchors[i].addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const blockID = anchors[i].getAttribute('href').substr(1)
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
