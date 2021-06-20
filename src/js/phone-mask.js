@@ -1,5 +1,5 @@
 export const phoneMask = () => {
-  const telNumber = document.getElementById("number");
+  const telNumber = document.querySelector(".phone-mask");
 
   window.addEventListener("DOMContentLoaded", () => {
 

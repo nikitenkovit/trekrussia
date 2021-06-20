@@ -5,6 +5,7 @@ import './styles/main.scss';
 // импорт js модулей
 import './js/header';
 import {ChiefSlider} from "./js/chiefSlider";
+import {phoneMask} from "./js/phone-mask";
 
 // инициализация слайдеров
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,3 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// инициализация маски телефона
+phoneMask();
