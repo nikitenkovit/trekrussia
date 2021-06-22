@@ -14,8 +14,8 @@ const PAGES_DIR = `${Paths.SRC}`;
 const PAGES = fs.readdirSync(PAGES_DIR).filter((filename) => filename.endsWith('.html'));
 
 module.exports = {
-    // target: "browserslist",
-    target: "web",
+    target: "browserslist",
+    // target: "web",
     entry: {
         app: Paths.SRC,
     },
@@ -99,5 +99,5 @@ module.exports = {
         extensions: [".js", ".jsx"]
     },
 
-    devtool: "source-map",
+    // devtool: "source-map",
 };
