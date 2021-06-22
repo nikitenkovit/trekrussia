@@ -84,7 +84,8 @@
 
     @media (min-width: $desktop) {
       margin-bottom: 3.472vw;
-      box-shadow: 0 0 1.8vw rgba(0, 0, 0, 0.08);
+      background: rgba(0, 0, 0, .02);
+      box-shadow: 0 0 1.8vw rgba(0, 0, 0, 0.05);
     }
   }
 
